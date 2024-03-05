@@ -23,7 +23,7 @@ const TeamMember = ({ image, name, position, bio }) => {
       />
       <Box>
         <Flex alignItems={"center"} gap={5}>
-          <Image src={image} width={{lg : "100%", md : "100%", sm : "50%", base : "30%"}} />
+          <Image src={image} width={{lg : "30%", md : "30%", sm : "20%", base : "20%"}} />
           <Box>
             <Text fontSize={{lg : "30px", md : "30px", sm : "30px", base : "20px"}}>{name}</Text>
             <Text fontSize={{lg : "15px", md : "15px", sm : "12px", base : "12px"}}>{position}</Text>
