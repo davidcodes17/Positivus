@@ -15,7 +15,7 @@ import Footer from "../layouts/Footer";
 
 const Home = () => {
   return (
-   <Box pt={5} px={{lg : 20, md : 10, sm : 2, base : 5}}>
+   <Box pt={5} px={{lg : 20, md : 10, sm : 10, base : 5}}>
     <Header />
     <Hero />
     <Companies />

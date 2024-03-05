@@ -85,7 +85,16 @@ const Team = () => {
           />
         </Grid>
       </Box>
-      <Flex justifyContent={"right"} mt={10} mr={"50px"}>
+      <Flex
+        justifyContent={{
+          lg: "right",
+          md: "right",
+          sm: "center",
+          base: "center",
+        }}
+        mt={10}
+        mr={{ lg: "50px", md: "50px", sm: 0, base: 0 }}
+      >
         <Button
           height={"60px"}
           width={200}

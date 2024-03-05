@@ -13,6 +13,7 @@ const ProcessCard = () => {
           border={"3px solid #191A23"}
           cursor={"pointer"}
           bg={"#F3F3F3"}
+          display={{lg : "block", md : "block", sm : "none",base : "none"}}
           borderRadius={100}
           px={4}
           py={7}

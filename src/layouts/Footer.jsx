@@ -5,7 +5,12 @@ import { Facebook, Instagram, Twitch, Whatsapp } from "iconsax-react";
 
 const Footer = () => {
   return (
-    <Box p={{lg : 20, md : 20, sm : 10, base : 10}} mt={200} borderTopRadius={40} bg={"#191A23"}>
+    <Box
+      p={{ lg: 20, md: 20, sm: 10, base: 10 }}
+      mt={200}
+      borderTopRadius={40}
+      bg={"#191A23"}
+    >
       <Flex alignItems={"center"} justifyContent={"space-between"}>
         <Box filter={"invert()"}>
           <Logo />
@@ -32,7 +37,10 @@ const Footer = () => {
           </Text>
         </Flex>
         <Flex>
-          <Flex gap={2} display={{lg : "flex", md : "flex", sm : "flex", base : "none"}}>
+          <Flex
+            gap={2}
+            display={{ lg: "flex", md: "flex", sm: "flex", base: "none" }}
+          >
             <Facebook color="#fff" variant="Bold" size={30} />
             <Twitch color="#fff" variant="Bold" size={30} />
             <Instagram color="#fff" variant="Bold" size={30} />
@@ -65,9 +73,19 @@ const Footer = () => {
             </Text>
           </Box>
         </Box>
-        <Box p={10} borderRadius={20} className="white" height={"fit-content"}>
+        <Box
+          p={{ lg: 10, md: 10, sm: 5, base: 7}}
+          borderRadius={20}
+          className="white"
+          height={"fit-content"}
+        >
           <Flex gap={5} flexWrap={"wrap"}>
-            <Input width={{lg : 300, md : 300, sm : "100%", sm : "100%"}} placeholder="Email" height={"60px"} />
+            <Input
+              color={"#fff"}
+              width={{ lg: 300, md: 300, sm: "100%", sm: "100%" }}
+              placeholder="Email"
+              height={"60px"}
+            />
             <Button
               width={200}
               _hover={"none"}
