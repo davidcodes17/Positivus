@@ -2,14 +2,22 @@ import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import Logo from "../components/Logo";
 import { Facebook, Instagram, Twitch, Whatsapp } from "iconsax-react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <Box
       p={{ lg: 20, md: 20, sm: 10, base: 10 }}
-      mt={200}
+      mt={100}
       borderTopRadius={40}
-      bg={"#191A23"}
+      bg={"red"}
+      as={motion.div}
+        whileInView={{
+          background : "#191A23",
+          transition: {
+            delay: 2,
+          },
+        }}
     >
       <Flex alignItems={"center"} justifyContent={"space-between"}>
         <Box filter={"invert()"}>

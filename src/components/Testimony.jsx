@@ -1,9 +1,19 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Testimony = () => {
   return (
-    <Box>
+    <Box as={motion.div}
+    opacity={0}
+    transform={"translateY(40px)"}
+    whileInView={{
+      transform : "translateX(0px)",
+      opacity: 1,
+      transition: {
+        delay: .3,
+      },
+    }}>
       <Box width={500} border={"2px solid #B9FF66"} borderRadius={20} p={10}>
         <Text color={"#fff"}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque

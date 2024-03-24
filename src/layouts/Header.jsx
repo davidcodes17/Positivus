@@ -2,11 +2,18 @@ import { Box, Button, CloseButton, Flex, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Logo from "../components/Logo";
 import { HambergerMenu } from "iconsax-react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [dis, setDis] = useState("none");
   return (
-    <Box>
+    <Box as={motion.div} opacity={0} translateY={-40} whileInView={{
+      opacity : 1,
+      translateY : 0,
+      transition : {
+        delay : .3
+      }
+    }}>
       <Flex alignItems={"center"} justifyContent={"space-between"}>
         <Logo />
         <Flex

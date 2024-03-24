@@ -1,11 +1,21 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import Testimony from "../components/Testimony";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
     <Box mt={200}>
-      <Flex flexWrap={{lg : "nowrap", md : "nowrap", sm : "wrap", base : "wrap"}} alignItems={"center"} gap={10}>
+      <Flex as={motion.div}
+        opacity={0}
+        transform={"translateY(40px)"}
+        whileInView={{
+          transform : "translateX(0px)",
+          opacity: 1,
+          transition: {
+            delay: .3,
+          },
+        }} flexWrap={{lg : "nowrap", md : "nowrap", sm : "wrap", base : "wrap"}} alignItems={"center"} gap={10}>
         <Heading
           fontSize={50}
           bg={"#B9FF66"}

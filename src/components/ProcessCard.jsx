@@ -1,9 +1,19 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 
 const ProcessCard = () => {
   return (
-    <Box bg={"#B9FF66"} borderRadius={40} boxShadow={"10px 5px 0px #191A23"} mt={10} p={10}>
+    <Box as={motion.div}
+    opacity={0}
+    transform={"translateY(40px)"}
+    whileInView={{
+      transform : "translateX(0px)",
+      opacity: 1,
+      transition: {
+        delay: .3,
+      },
+    }} bg={"#B9FF66"} borderRadius={40} boxShadow={"10px 5px 0px #191A23"} mt={10} p={10}>
       <Flex alignItems={"center"} justifyContent={"space-between"}>
         <Flex gap={{lg : 10, md : 10, sm : 5, base : 5}} alignItems={"center"}>
           <Heading fontSize={{lg : "90px", md : "80px", sm : "60px", base : "30px"}}>01</Heading>

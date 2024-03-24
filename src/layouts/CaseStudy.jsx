@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import Case from "../components/Case";
+import { motion } from "framer-motion";
 
 const CaseStudy = () => {
   return (
@@ -8,6 +9,16 @@ const CaseStudy = () => {
       <Flex
         alignItems={"center"}
         gap={10}
+        as={motion.div}
+        opacity={0}
+        transform={"translateY(40px)"}
+        whileInView={{
+          transform : "translateX(0px)",
+          opacity: 1,
+          transition: {
+            delay: .3,
+          },
+        }}
         flexWrap={{ lg: "nowrap", md: "nowrap", sm: "wrap", base: "wrap" }}
       >
         <Heading
@@ -32,6 +43,16 @@ const CaseStudy = () => {
         bg={"#191A23"}
         p={10}
         width={"100%"}
+        as={motion.div}
+        opacity={0}
+        transform={"translateY(40px)"}
+        whileInView={{
+          transform : "translateX(0px)",
+          opacity: 1,
+          transition: {
+            delay: .3,
+          },
+        }}
         mt={10}
         height={{lg : "300px", md : "300px", sm : "fit-content", base : "fit-content"}}
         borderRadius={20}

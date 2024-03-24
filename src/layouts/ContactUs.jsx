@@ -12,12 +12,22 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 
 const ContactUs = () => {
   return (
-    <Box mt={200}>
-      <Flex alignItems={"center"} flexWrap={{lg : "nowrap", md : "nowrap", sm : "wrap", base : "wrap"}} gap={10}>
+    <Box mt={200} >
+      <Flex as={motion.div}
+        opacity={0}
+        transform={"translateY(40px)"}
+        whileInView={{
+          transform : "translateX(0px)",
+          opacity: 1,
+          transition: {
+            delay: .3,
+          },
+        }} alignItems={"center"} flexWrap={{lg : "nowrap", md : "nowrap", sm : "wrap", base : "wrap"}} gap={10}>
         <Heading
           fontSize={50}
           bg={"#B9FF66"}
@@ -26,7 +36,7 @@ const ContactUs = () => {
           py={2}
           borderRadius={10}
         >
-          Testimonials
+          Contact Us
         </Heading>
         <Text width={300}>
           Step-by-Step Guide to Achieving Your Business Goals

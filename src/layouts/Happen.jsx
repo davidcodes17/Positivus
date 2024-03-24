@@ -1,9 +1,16 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Happen = () => {
   return (
-    <Box py={"60px"}>
+    <Box py={"60px"} as={motion.div} opacity={0} transform={"translateY(50px)"} whileInView={{
+      opacity : 1,
+      transform : "translateY(0px)",
+      transition : {
+        delay : .5
+      }
+    }}>
       <Flex justifyContent={"space-between"} py={{lg : 0, md : 0,sm : 20, base : 20}} alignItems={'center'} bg={"#F3F3F3"} px={{lg : 20, md : 20, sm : 10, base: 10}} borderRadius={40}>
         <Box>
           <Heading>Let's make things happen</Heading>

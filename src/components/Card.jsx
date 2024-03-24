@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, IconButton, Image, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { ArrowUp } from "iconsax-react";
 import React from "react";
 
@@ -8,6 +9,16 @@ const Card = ({ textColor, textBg, containerBg, icon,upText,downText }) => {
       bg={containerBg}
       boxShadow={"5px 5px 0px #191A23"}
       p={10}
+      as={motion.div}
+      opacity={0}
+      transform={"translateX(30px)"}
+      whileInView={{
+        transform : "translateX(0px)",
+        opacity: 1,
+        transition: {
+          delay: 0.7,
+        },
+      }}
       my={5}
       width={650}
       borderRadius={40}
